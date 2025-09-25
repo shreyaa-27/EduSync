@@ -1,13 +1,33 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EduSync</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EduSync (Static)</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header class="header">
+      <div class="brand">EduSync</div>
+      <nav class="nav">
+        <a href="#/student">Student</a>
+        <a href="#/teacher">Teacher</a>
+        <a href="#/admin">Admin</a>
+        <a href="#/analytics">Analytics</a>
+      </nav>
+      <div class="actions">
+        <button id="themeToggle" title="Toggle theme">🌙</button>
+        <button id="notifBtn" title="Notifications">🔔<span id="notifBadge" class="badge hidden"></span></button>
+      </div>
+    </header>
+
+    <main id="app" class="container"></main>
+
+    <template id="tpl-notifs">
+      <div class="dropdown" id="notifDropdown"></div>
+    </template>
+
+    <script src="app.js"></script>
   </body>
   </html>
 
